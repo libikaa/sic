@@ -1,3 +1,3 @@
 # sic
 symmetric_key.py
-key_hashed.py
+keyed_hash.py
