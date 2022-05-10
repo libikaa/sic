@@ -116,7 +116,7 @@ while byte:
 print("message from file :",res)   
 D=hashfunction(res)
 print("after hash message ",D)
-D = int(str(D),2)
+D = int(D,2)
 S,M=sig(D)
 print("Signature : ",S)    
 print(ver(S,M))
