@@ -1,18 +1,14 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon May  9 11:21:22 2022
-
-@author: 19pt32
-"""
 import random
 
 def sig(M):
     S = M**d % n
-    return (S,M)
+    return S
 
 def ver(S,M):
+    D=hashfunction(M)
+    D = int(D,2)
     M_1 = S**e % n
-    if(M_1==M):
+    if(M_1==D):
         return "VERIFIED"
     else:
         return "INCORRECT"
@@ -117,6 +113,6 @@ print("message from file :",res)
 D=hashfunction(res)
 print("after hash message ",D)
 D = int(D,2)
-S,M=sig(D)
+S=sig(D)
 print("Signature : ",S)    
-print(ver(S,M))
+print(ver(S,res))
